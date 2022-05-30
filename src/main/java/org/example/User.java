@@ -1,6 +1,6 @@
 package org.example;
 
-import org.hibernate.annotations.CascadeType;
+//import org.hibernate.annotations.CascadeType;
 
 import javax.persistence.*;
 import java.util.ArrayList;
