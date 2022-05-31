@@ -1,9 +1,10 @@
 package org.example;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 
 @Entity
-@Table(name = "autos")
+@Table(name = "CARS")
 public class Auto {
 
     @Id
@@ -18,8 +19,8 @@ public class Auto {
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "ID")
+    private Owner owner;
 
     public Auto() {
     }
@@ -49,12 +50,12 @@ public class Auto {
         this.color = color;
     }
 
-    public User getUser() {
-        return user;
+    public Owner getUser() {
+        return owner;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(Owner owner) {
+        this.owner = owner;
     }
 
     @Override

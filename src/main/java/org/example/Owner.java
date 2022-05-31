@@ -2,13 +2,15 @@ package org.example;
 
 //import org.hibernate.annotations.CascadeType;
 
-import javax.persistence.*;
+
+import jakarta.persistence.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table (name = "users")
-public class User {
+@Table (name = "CAR_OWNERS")
+public class Owner {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,13 +20,13 @@ public class User {
     //можно не указывать Column name, если оно совпадает с названием столбца в таблице
     private int age;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "id", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Auto> autos;
 
-    public User() {
+    public Owner() {
     }
 
-    public User(String name, int age) {
+    public Owner(String name, int age) {
         this.name = name;
         this.age = age;
         autos = new ArrayList<>();
