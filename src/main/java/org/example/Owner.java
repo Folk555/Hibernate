@@ -9,13 +9,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table (name = "CAR_OWNERS")
+@Table (name = "\"CAR_OWNERS\"")
 public class Owner {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"ID\"")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @Column(name = "name")
+    @Column(name = "\"NAME\"")
     private String name;
     //можно не указывать Column name, если оно совпадает с названием столбца в таблице
     private int age;

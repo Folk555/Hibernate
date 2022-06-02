@@ -5,6 +5,7 @@ public class Main {
         UserService userService = new UserService();
         Owner owner = new Owner("Masha", 26);
         userService.saveUser(owner);
+        /*
         Auto ferrari = new Auto("Ferrari", "red");
         ferrari.setUser(owner);
         owner.addAuto(ferrari);
@@ -12,5 +13,7 @@ public class Main {
         ford.setUser(owner);
         owner.addAuto(ford);
         userService.updateUser(owner);
+
+         */
     }
 }
